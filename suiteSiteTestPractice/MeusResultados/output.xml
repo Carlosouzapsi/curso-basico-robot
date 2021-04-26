@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.1 (Python 3.8.5 on linux)" generated="20210426 10:07:35.008" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="/home/carlos/Documentos/curso-basico-robot/suiteSiteTestPractice/tests">
+<suite id="s1-s1" name="TestSitePractice" source="/home/carlos/Documentos/curso-basico-robot/suiteSiteTestPractice/tests/TestSitePractice.robot">
+<test id="s1-s1-t1" name="Caso de Teste 01: Pesquisar produto existente">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://automationpractice.com/index.php</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210426 10:07:35.160" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20210426 10:07:35.159" endtime="20210426 10:07:41.909"/>
+</kw>
+<status status="PASS" starttime="20210426 10:07:35.159" endtime="20210426 10:07:41.909"/>
+</kw>
+<kw name="Acessar a página home do site" library="Resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>My Store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210426 10:07:41.927" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20210426 10:07:41.911" endtime="20210426 10:07:41.928"/>
+</kw>
+<status status="PASS" starttime="20210426 10:07:41.910" endtime="20210426 10:07:41.928"/>
+</kw>
+<kw name="Digitar o nome do produto &quot;Blouse&quot; no campo de pesquisa" library="Resource" sourcename="Digitar o nome do produto &quot;${PRODUTO}&quot; no campo de pesquisa">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=search_query_top</arg>
+<arg>${PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 10:07:41.931" level="INFO">Typing text 'Blouse' into text field 'id=search_query_top'.</msg>
+<status status="PASS" starttime="20210426 10:07:41.930" endtime="20210426 10:07:42.035"/>
+</kw>
+<status status="PASS" starttime="20210426 10:07:41.929" endtime="20210426 10:07:42.035"/>
+</kw>
+<kw name="Clicar no botão pesquisar" library="Resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name=submit_search</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210426 10:07:42.037" level="INFO">Clicking element 'name=submit_search'.</msg>
+<status status="PASS" starttime="20210426 10:07:42.036" endtime="20210426 10:07:43.529"/>
+</kw>
+<status status="PASS" starttime="20210426 10:07:42.036" endtime="20210426 10:07:43.530"/>
+</kw>
+<status status="PASS" starttime="20210426 10:07:35.158" endtime="20210426 10:07:43.530"/>
+</test>
+<status status="PASS" starttime="20210426 10:07:35.031" endtime="20210426 10:07:43.532"/>
+</suite>
+<status status="PASS" starttime="20210426 10:07:35.009" endtime="20210426 10:07:43.536"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestSitePractice">Tests.TestSitePractice</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
